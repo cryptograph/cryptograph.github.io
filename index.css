@@ -1,0 +1,255 @@
+html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+
+body 
+{ 
+  font-family: 'Open Sans', sans-serif; 
+  margin: 25px 25px 25px 25px; 
+  text-align: center; 
+  font-size: smaller;
+  background-image: url("src/back.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+
+   position: absolute;
+    top:160;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.frame {
+  height: 575px;
+  width: 430px;
+  background:
+    linear-gradient(
+    rgba(35,43,85,0.75),
+    rgba(35,43,85,0.95)),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.based_on {
+  width: 100%;
+  position: relative;
+   left: 400px;
+   top: 850px;
+}
+
+.form-styling {
+  width: 100%;
+  height: 35px;
+	padding-left: 15px;
+	border: none;
+	border-radius: 20px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,.2);
+  color: rgba(255,255,255,.7);
+}
+
+.lefthalf-form-styling {
+  width: 40%;
+  height: 35px;
+  float: left;
+	padding-left: 15px;
+	border: none;
+	border-radius: 20px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,.2);
+}
+
+.righthalf-form-styling {
+  width: 40%;
+  height: 35px;
+	padding-left: 15px;
+	border: none;
+	border-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  float: right;
+
+  background: rgba(255,255,255,.2);
+
+}
+
+.btn {
+  float: center;
+  margin-top: 20px;
+  width: 50%;
+  height: 35px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn:hover {
+  float: center;
+  padding-top: 0px;
+  width: 50%;
+  height: 35px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid white;
+  color: black;
+  background: white;
+} 
+
+table#theHashForm 
+{ 
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center;
+} 
+
+
+table#theHashForm h3
+{ 
+  margin: 5px 0px 5px 0px; 
+}
+
+table#theHashForm p 
+{ 
+  margin: 2px 2px 2px 2px; 
+}
+
+td.config
+{
+  padding: 0px 5px 0px 5px; 
+  position: relative;
+  top: 20px;
+  vertical-align: top; 
+}
+
+td.config_line
+{
+  border-top: 2px solid white; 
+  padding: 10px 15px 10px 15px; 
+  position: relative;
+  top: 20px;
+}
+
+.config h3
+{ 
+  font-size: 80%;
+}
+
+.gapAfter
+{
+  padding-bottom: 16px !important;
+}
+
+.config-note
+{
+  font-size: 70%;
+}
+
+div.parameterList 
+{ 
+  padding: 0px 2px 0px 10px; 
+  text-align: left;
+}
+
+td.hash 
+{ 
+
+  padding: 0px 5px 0px 5px; 
+  vertical-align: top; 
+} 
+
+div.step 
+{ 
+  display:block; 
+  padding: 0px 0px 0px 0px; 
+}
+
+
+h1 
+{ 
+  text-align: center; 
+}
+
+div.footer 
+{
+ font-size: xx-small;
+ text-align: center; 
+}
+
+#theHashedPassword
+{
+  text-align: center;
+}
+
+#theToggleModeLink
+{
+  font-size: xx-small;
+}
+
+.notification
+{
+  color: green;
+}
+
+.warning
+{
+  color: red;
+}
+
+label {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  color: rgba(255,255,255,.7);
+  display: block;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #555;
+    width: 420px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -210px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

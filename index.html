@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="google-site-verification" content="tsC40Go6u6ldH1pmeafOZhKJc7v1dxGQ6lYzxqlkN2I">
+  <title>Password Generator</title>
+  <script src="src/forge.js"></script>
+  <script src="src/pwdhash.js" type="text/javascript"></script>
+  <script src="src/hashed-password.js" type="text/javascript"></script>
+  <script src="src/domain-extractor.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body onload="Init();">
+<table style="margin: 3em 1em 1em 1em" align="center"><tbody><tr><td>
+<form name="hashform" action="error.html" method="POST" onsubmit="setTimeout('GenerateToTextField()', 0); return false;">
+
+<div class="container">
+	<div class="frame">
+		<table id="theHashForm"><tbody>
+			<tr><td class="form">
+				<div class="step" id="theSiteDomain">
+			 		<label for="domain">Domain</label>
+					<p><input class="form-styling" name="domain" type="text"></p>
+				</div>
+
+				<div class="step" id="theSitePassword">
+					<label for="password">Master Password</label>
+					<p><input class="form-styling" name="sitePassword" type="password"></p>
+				</div>
+			</td></tr> 
+			<tr><td class="stepList gapAfter" colspan="2">
+				<div class="step" id="theHashedPassword">
+					<label for="password">Password</label>
+			  		<span id="theGeneratePanel">
+		    				<input class="form-styling" name="hashedPassword" value="kMYUECDK1" type="text">
+		    				<input class="btn" name"submitbutton"="" value="Generate" type="submit">
+		  			</span>
+					<p align="center"><a id="theToggleModeLink" href="javascript:ToggleAdvancedMode()"></a></p>
+				</div>
+			</td></tr>
+
+			<td class="config_line"></td>
+
+			<tr><td class="config">
+                                <div class="gapAfter"></div>
+
+
+				<!--<div class="tooltip">
+  					<span class="tooltiptext">A user-specific client-side salt that’s stored in the browser. It would mitigate the attack, since it could dramatically 										increase the keyspace an attacker would need to search</span>-->
+					<div class="step" id="theUserSalt">
+						<label for="password">Salt</label>
+						<p><input class="form-styling" name="salt" value="User_Salt" type="text"></p>
+					</div>
+				<!--</div>
+				<div class="tooltip"> 
+  					<span class="tooltiptext">The number of times the PRF will be applied to the password when deriving the password</span> -->
+					<div class="step" id="theIterations">
+						<label for="password"># iterations</label>
+						<p><input class="form-styling" name="iterations" value="10000" type="text"></p>
+					</div> 
+				<!--</div>-->
+			</td></tr>
+		</tbody></table>
+
+	</div>
+</div>
+
+<div class="based_on">	
+	<label>The website is based on the works by <a href="https://pwdhash.github.io/website/">Security Lab</a> Security Lab @ Stanford University and by <a href="https://www.cl.cam.ac.uk/~dl551/pwdhash/">Security Group</a> @ University of Cambridge  </label>
+
+</div> 
+
+
+</body></html>
+
